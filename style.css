@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+body{
+    margin: 0;
+}
+
+
+header{
+    position: fixed;
+    width: 100vw;
+    height: 87px;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+    font-family: "Ubuntu", "sans-serif" ;
+    z-index: 1;
+}
+header ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+}
+header ul li.logo{
+    display: flex;
+    align-items: center;
+    margin-left: -10px;
+    width: 27px;
+    height: 27px;
+}
+header ul div.items{
+    display: inline-flex;
+    margin: 0 15px;
+}
+header ul div.items a{
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+    font-size: 1rem;
+    padding: 15px;  
+}
+header ul div.items a i{
+    margin:0 -10px 0 -22px;    
+}
+header ul div.buscar{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #e9e9e9;
+    border-radius: 25px;
+    z-index: 1;
+}
+header ul .buscar:hover{
+    background: #e1e1e1;
+}
+header ul .search input{
+    font-family: "Ubuntu", "sans-serif" ;
+    font-weight: 400;
+    height: 100%;
+    width: 97%;
+    position: absolute;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-radius: 5px 0 0 5px;
+}
+header ul .search input::placeholder{
+    font-family: "Ubuntu", "sans-serif" ;
+    font-weight: 400;
+    font-size: 1rem;
+}
+header ul .search .icon{
+    height: 100%;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-right: -5px;
+    background: transparent;
+    border-radius: 50% 0 0 50%;
+}
+header ul .buscar .search .icon i{
+    color: gray;
+    font-size: 18px;
+}
+header ul .bell{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+}
+header ul .bell i{
+    font-size: 1.5rem;
+    margin: 0 10%;
+    color: gray;
+    padding: 5px;
+}
+header ul .sms{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+}
+header ul .sms i{
+    font-size: 1.5rem;
+    margin: 0 10%;
+    color: gray;
+    padding: 5px;
+}
+header ul .profile{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+header ul .profile img{
+    border-radius: 100%;
+    width: 27px;
+    height: 27px;
+}
+header ul .profile .icon{
+    color: gray;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.box{
+    grid-row-end: span 15;
+    margin: 0 0 50px 0;
+}
+.box1{
+    grid-row-end: span 18;
+    margin: 0 0 17px 0;
+}
+.box2{
+    grid-row-end: span 21;
+    margin: 0 0 20px 0;
+}
+.box3{
+    grid-row-end: span 24;
+    margin: 0 0 27px 0;
+}
+.box4{
+    grid-row-end: span 29;
+    margin: 0 0 35px 0;
+}
+
+
+
+.container{
+    position: relative;
+    top: 87px;  
+    display: grid;
+    grid-template-columns: repeat(auto-fill,235px);
+    grid-template-rows: auto;
+    justify-content: center;
+    column-gap: 18px;
+}
+.container .card{
+    position: relative;
+    cursor: pointer;
+}
+.container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    object-fit: cover;
+}
+.container .card .hover{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    background: rgba( 60, 60, 60, 0.6);
+    transition: 0.2s;
+    visibility: hidden;
+}
+.container .card:hover > .hover{
+    opacity: 1;
+    visibility: visible;
+}
+.container .card .hover .content{
+    height: fit-content;
+    margin: 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .card .hover .content a{
+    text-decoration: none;
+    color: white;
+    font-family: "Ubuntu", "sans-serif";
+    font-weight: 700;
+}
+.container .card .hover .content .save{
+    background-color: red;
+    padding:1em;
+    border-radius: 20px ;
+}
+.container .card .hover .content .save:hover{
+    background-color: rgb(179, 3, 3)
+}
+.container .card .hover .cont-icons{
+    margin: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.container .card .hover .cont-icons a{
+    text-decoration: none;
+    margin: 10px;
+    color: white;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    header ul .search input{
+        visibility: hidden;
+    }
+    header ul div.buscar{
+        visibility: hidden;
+    }
+    header ul .search .icon{
+        visibility: visible;
+    }
+}
+
+
